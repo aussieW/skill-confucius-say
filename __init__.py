@@ -18,8 +18,6 @@
 from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler
 from mycroft.util import wait_while_speaking
-#from mycroft.configuration import Configuration
-#from mycroft.configuration.config import SYSTEM_CONFIG, USER_CONFIG
 
 from mycroft.util.log import getLogger
 LOGGER = getLogger(__name__)
@@ -32,12 +30,14 @@ class ConfuciusSkill(MycroftSkill):
 
     @intent_handler(IntentBuilder('handle_saying').require('confucius').require('say'))
     def handle_saying(self, message):
+        LOGGER.info('ConfuciusSkill: Quoting Confucius')
         self.speak('Confucius say')
         wait_while_speaking()
         self.speak_dialog('sayings')
 
     @intent_handler(IntentBuilder('handle_funny_saying').require('funny').require('confucius').require('say'))
-    def handle_saying(self, message):
+    def handle_funny_saying(self, message):
+        LOGGER.info('ConfuciusSkill: Funny Confucius saying')
         self.speak('Confucius say')
         wait_while_speaking()
         self.speak_dialog('funny_sayings')
