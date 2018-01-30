@@ -17,8 +17,9 @@
 
 from adapt.intent import IntentBuilder
 from mycroft.skills.core import MycroftSkill, intent_handler
-from mycroft.configuration import Configuration
-from mycroft.configuration.config import SYSTEM_CONFIG, USER_CONFIG
+from mycroft.util import wait_while_speaking
+#from mycroft.configuration import Configuration
+#from mycroft.configuration.config import SYSTEM_CONFIG, USER_CONFIG
 
 from mycroft.util.log import getLogger
 LOGGER = getLogger(__name__)
