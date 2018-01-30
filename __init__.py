@@ -29,19 +29,16 @@ class ConfuciusSkill(MycroftSkill):
     def __init__(self):
         super(ConfuciusSkill, self).__init__(name="ConfuciusSkill")
 
-#    def initialize(self):
-#        self.register_intent_file('accuse.intent', self.handle_accuse_intent)
-
-    def handle_request_intent(self, message):
-        # play a randomly selected sound file
-        self.fart_and_comment()
-
     @intent_handler(IntentBuilder('handle_saying').require('confucius').require('say'))
     def handle_saying(self, message):
+        self.speak('Confucius say')
+        self.wait_while_speaking()
         self.speak_dialog('sayings')
 
     @intent_handler(IntentBuilder('handle_funny_saying').require('funny').require('confucius').require('say'))
     def handle_saying(self, message):
+        self.speak('Confucius say')
+        self.wait_while_speaking()
         self.speak_dialog('funny_sayings')
 
     def stop(self):
