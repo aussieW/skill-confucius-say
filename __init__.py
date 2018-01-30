@@ -32,13 +32,13 @@ class ConfuciusSkill(MycroftSkill):
     @intent_handler(IntentBuilder('handle_saying').require('confucius').require('say'))
     def handle_saying(self, message):
         self.speak('Confucius say')
-        wait_while_speaking()
+        #wait_while_speaking()
         self.speak_dialog('sayings')
 
     @intent_handler(IntentBuilder('handle_funny_saying').require('funny').require('confucius').require('say'))
     def handle_saying(self, message):
         self.speak('Confucius say')
-        wait_while_speaking()
+        #wait_while_speaking()
         self.speak_dialog('funny_sayings')
 
     def stop(self):
