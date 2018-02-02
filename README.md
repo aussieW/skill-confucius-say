@@ -8,6 +8,7 @@ On request, Mycroft will deliver a random quote from Confucius. Humerous quotes 
 * "What does Confucius say"
 * "Quote Confucius"
 * "Tell me a funny Confucius saying"
+* "Give me a humorous Confucius quote"
 
 ## Credits 
 aussieW
